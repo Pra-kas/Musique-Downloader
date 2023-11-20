@@ -9,7 +9,7 @@ import spotipy
 import re
 from dotenv import load_dotenv
 
-
+uname = os.getlogin()
 
 def main():
     # Create ArgumentParser object
@@ -26,7 +26,7 @@ def main():
     # Access the input option value
     if args.playlist:
         playlist = args.playlist
-        env_path = "/home/prakash/Spoffline/spos.env"
+        env_path = "/home/" + uname  + "/Musique-Downloader/spos.env"
         load_dotenv(dotenv_path=env_path)
 
         CLIENT_ID = os.getenv("CLIENT_ID", "")
@@ -51,8 +51,7 @@ def main():
         playlist_name = playlist_details["name"]
 
         #making a new directory to store songs 
-        username = os.getlogin()
-        parent_path = "/home/" + username + "/Music/"
+        parent_path = "/home/" + uname + "/Music/"
         path = os.path.join(parent_path,playlist_name)
         if os.path.exists(path):
             print("Directory already exists! Making it the download path...")
@@ -93,7 +92,7 @@ def main():
         count = 1
 
         #import the csv file with songs and artists name 
-        with open('/home/prakash/Spoffline/track_info.csv',newline='') as f:
+        with open('/home/'+uname+'/Musique-Downloader/track_info.csv',newline='') as f:
             reader = csv.reader(f)
             data = list(reader)
 
@@ -192,7 +191,7 @@ def main():
 
             if audio_stream:
             # Download the audio
-                audio_path = audio_stream.download(output_path="/home/prakash/Music/")
+                audio_path = audio_stream.download(output_path="/home/" + uname + "/Music/")
 
             # Convert the audio from MP4 to MP3
                 audio_path_mp3 = audio_path.replace(".mp4", ".mp3")
