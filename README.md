@@ -54,3 +54,8 @@ Incase of network issues or internal error
 ## Configuration
 
 Ensure your `.env` file includes the following:
+
+## Contributors
+
+- [Prakash kumar M]  ```https://github.com/Pra-Kas```
+- [Sarath S]  ```https://github.com/grey-4```
