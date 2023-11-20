@@ -39,7 +39,17 @@ Download your favorite Spotify playlists with ease!
     ```
       python3 spoyou.py -s <song_link>
     ```
-
+## Error 
+    Incase of network issues or internal error 
+    
+        - Create resume.txt in the same directory
+            ``` 
+                touch resume.txt
+            ```
+        - Write the count of downloaded songs in  resume.txt
+        - After run the script again
+        - This will resume the download instead os downloading songs from the beggining
+        
 ## Configuration
 
 Ensure your `.env` file includes the following:
