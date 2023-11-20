@@ -47,9 +47,9 @@ Incase of network issues or internal error
    ``` 
       touch resume.txt
    ```
-  - Write the count of downloaded songs in  resume.txt
-  - After run the script again
-  - This will resume the download instead os downloading songs from the beggining
+- Write the count of downloaded songs in  resume.txt
+- After run the script again
+- This will resume the download instead os downloading songs from the beggining
         
 ## Configuration
 
